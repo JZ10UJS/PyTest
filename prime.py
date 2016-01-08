@@ -48,11 +48,8 @@ def test_1():
 def test_2():
     isprime_list = [True for i in range(10**5+1)]  # [True, True, True,...,True]
     prime_list(isprime_list, 0, len(isprime_list))
-    ans = 0
-    for i,tf in enumerate(isprime_list):
-        if tf:
-            ans += i
-    return ans
+    
+    return sum(isprime_list)
 
 
 if __name__ == '__main__':
